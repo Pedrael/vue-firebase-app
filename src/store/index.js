@@ -3,6 +3,28 @@ import firebase from 'firebase/app'
 
 export default createStore({
   state: {
+    tabsList: [{
+      name: 'About',
+      rights: 'all',
+      component: 'About'
+    },
+    {
+      name: 'Edit users',
+      rights: 'admin'
+    },
+    {
+      name: 'Tab3',
+      rights: 'all'
+    },
+    {
+      name: 'Tab4',
+      rights: 'all'
+    }]
+  },
+  getters: {
+    getTabsList: (state) => {
+      return state.tabsList
+    }
   },
   mutations: {
   },
